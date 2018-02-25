@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for vm in $(./vm-names); do
+  echo "$vm:"
+  vagrant ssh $vm -c "/vagrant/hello.go foo bar"
+done
